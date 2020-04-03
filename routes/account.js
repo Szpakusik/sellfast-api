@@ -7,6 +7,16 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
+router.post('/login', function(req, res, next) {
+    res.status(200).send( {
+        message:'You have logged well',
+        creds:{
+            email: req.body.email,
+            password: req.body.password,
+        },
+    } )
+});
+
 router.post('/register', function(req, res, next) {});
 router.get('/login', function(req, res, next) {});
 
