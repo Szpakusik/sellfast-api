@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
-router.post('/login', function(req, res, next) {
+router.post('/register', function(req, res, next) {});
+
+router.get('/login', function(req, res, next) {
     res.status(200).send( {
         message:'You have logged well',
         creds:{
@@ -16,9 +18,6 @@ router.post('/login', function(req, res, next) {
         },
     } )
 });
-
-router.post('/register', function(req, res, next) {});
-router.get('/login', function(req, res, next) {});
 
 router.get('/details', function(req, res, next) {}); //get
 router.post('/details', function(req, res, next) {}); //changing
